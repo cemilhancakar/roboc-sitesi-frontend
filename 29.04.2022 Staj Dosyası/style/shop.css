@@ -1,0 +1,171 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-padding-top:2rem ;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#f5b041;
+    --text-color:#212f3d;
+    --bg-color:#fff;
+    
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+}
+.container{
+    max-width:1280px;
+    margin: auto;
+    width: 100%;
+}
+section{
+    padding:4.5rem 0 35rem;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.80);
+    background: var(--bg-color);
+} 
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+    padding: 10px 22px;
+    color: var(--main-color);
+    border-radius: 8px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    
+
+}
+.menu li a:hover{
+    background: var(--second-color);
+    color: #ddd;
+    border: none;
+}
+
+.section-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.detail-box{
+
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform:uppercase;
+}
+ .shop{
+    margin-top:2rem;
+ } 
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.5rem;
+}
+
+.product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 15px;
+    border: 2px solid var(--main-color);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+.product-img{
+    width: 100%;
+    height: auto;
+   
+}
+.price{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.product-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    word-break: break-word; 
+    table-layout:fixed;
+    
+}
+.add-carts{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background:var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+}
+@media (max-width:1205px) {
+    nav{
+        padding: 10px 20px;
+        z-index:1000 ;
+    }
+    .menu{
+        position: fixed;
+        top: 60px;
+        right: 100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        font-size: 25px;
+        width: 100%;
+        height: 100vh;
+        background: var(--text-color);
+        transition: 0.5s ease;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+    }
+    .menu.active{
+        right: 0;
+    }
+    nav ul li a{
+        font-size: 25px;
+        line-height: 80px;
+        color: #fff;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url("../img/hamburger_menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        
+    }
+}
